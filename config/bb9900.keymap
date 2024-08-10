@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include "keys_cs_qwerty.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
@@ -11,11 +12,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
-#include "keys_cs_qwerty.h"
 
 / {
     keymap {
         compatible = "zmk,keymap";
+
         default_layer {
             bindings = <
                 &kp CS_Z_CARON &kp CS_U_RING &kp CS_S_CARON &kp CS_R_CARON &kp CS_E_CARON &kp CS_C_CARON &kp CS_Y_ACUTE &kp CS_U_ACUTE &kp CS_I_ACUTE &kp CS_E_ACUTE &kp CS_A_ACUTE &kp CS_CARON &kp CS_ACUTE
@@ -196,12 +197,12 @@
 
         default_layer {
             bindings = <
-&none             &none
-&mtt K_CMENU TAB  &msk LGUI LGUI  &mkp LCLK     &mtt ESC K_BACK  &mkp RCLK
-&mtt LS(Q) Q      &mtt LS(W) W    &mtt LS(E) E  &mtt LS(R) R     &mtt LS(T) T              &mtt LS(Y) Y    &mtt LS(U) U  &mtt LS(I) I  &mtt LS(O) O  &mtt LS(P) P
-&mtt LS(A) A      &mtt LS(S) S    &mtt LS(D) D  &mtt LS(F) F     &mtt LS(G) G              &mtt LS(H) H    &mtt LS(J) J  &mtt LS(K) K  &mtt LS(L) L  &kp BSPC
-&ALTL             &mtt LS(Z) Z    &mtt LS(X) X  &mtt LS(C) C     &mtt LS(V) V              &mtt LS(B) B    &mtt LS(N) N  &mtt LS(M) M  &kp DELETE    &kp ENTER
-                                  &SHFT                          &mtt K_POWER KP_NUMBER_0  &kp SPACE       &EALT         &sk LCTRL
+&none              &none
+&mtt K_CMENU TAB   &msk LGUI LGUI     &mkp LCLK          &mtt ESC K_BACK    &mkp RCLK
+&mtt LS(Q) Q       &mtt CS_E_CARON W  &mtt CS_E_ACUTE E  &mtt CS_R_CARON R  &mtt CS_CARON T           &mtt CS_Y_ACUTE Y    &mtt CS_U_RING U   &mtt CS_I_ACUTE I  &mtt CS_ACUTE O  &mtt LS(P) P
+&mtt CS_A_ACUTE A  &mtt CS_S_CARON S  &mtt CS_CARON D    &mtt LS(F) F       &mtt LS(G) G              &mtt LS(H) H         &mtt CS_U_ACUTE J  &mtt CS_ACUTE K    &mtt CS_CARON L  &kp BSPC
+&ALTL              &mtt CS_Z_CARON Z  &mtt LS(X) X       &mtt CS_C_CARON C  &mtt LS(V) V              &mtt LS(B) B         &mtt CS_CARON N    &mtt LS(M) M       &kp DELETE       &kp ENTER
+                                      &SHFT                                 &mtt K_POWER KP_NUMBER_0  &kp SPACE            &EALT              &sk LCTRL
             >;
         };
 
