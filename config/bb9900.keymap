@@ -21,7 +21,7 @@
                 &kp CS_Z_CARON &kp CS_U_RING &kp CS_S_CARON &kp CS_R_CARON &kp CS_E_CARON &kp CS_C_CARON &kp CS_Y_ACUTE &kp CS_U_ACUTE &kp CS_I_ACUTE &kp CS_E_ACUTE &kp CS_A_ACUTE &kp CS_CARON &kp CS_ACUTE
             >;
         };
-    }
+    };
 };
 
 #define ALT 1
