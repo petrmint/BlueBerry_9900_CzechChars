@@ -202,7 +202,7 @@
 &mtt LS(Q) Q       &mtt CS_E_CARON W  &mtt CS_E_ACUTE E  &mtt CS_R_CARON R  &mtt CS_CARON T                   &mtt CS_Y_ACUTE Y    &mtt CS_U_RING U   &mtt CS_I_ACUTE I  &mtt CS_ACUTE O  &mtt LS(P) P
 &mtt CS_A_ACUTE A  &mtt CS_S_CARON S  &mtt CS_CARON D    &mtt LS(F) F       &mtt LS(G) G                      &mtt LS(H) H         &mtt CS_U_ACUTE J  &mtt CS_ACUTE K    &mtt CS_CARON L  &kp BSPC
 &ALTL              &mtt CS_Z_CARON Z  &mtt LS(X) X       &mtt CS_C_CARON C  &mtt LS(V) V                      &mtt LS(B) B         &mtt CS_CARON N    &mtt LS(M) M       &kp DELETE       &kp ENTER
-                                      &SHFT                                 &mtt LC(RA(CS_N3)) LC(RA(CS_N1))  &kp SPACE            &sk LCTRL          &SHFT
+                                      &SHFT                                 &mtt LC(RA(NUMBER_3)) LC(RA(N1))  &kp SPACE            &sk LCTRL          &SHFT
             >;
         };
 
