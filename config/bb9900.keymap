@@ -247,7 +247,7 @@
 &mtt K_CONTEXT_MENU TAB     &MAN             &gresc           &mmBHUR           &mmAltVyp
 &mtt CS_PERCENT CS_HASH     &mtt HOME CS_N1  &mtt UP CS_N2    &mtt PG_UP CS_N3  &mtt CS_LBKT CS_LPAR        &mtt CS_RBKT CS_RPAR     &mtt CS_LT CS_UNDER         &mtt CS_GT CS_MINUS          &mtt CS_EQUAL CS_PLUS            &mtt CS_AMPS CS_AT
 &mtt CS_DEGREE CS_ASTERISK  &mtt LEFT CS_N4  &mtt DOWN CS_N5  &mtt RIGHT CS_N6  &mtt CS_BACKSLASH CS_SLASH  &mtt CS_PIPE CS_COLON    &mtt CS_LEFT_BRACE CS_SEMI  &mtt CS_RIGHT_BRACE CS_APOS  &mtt CS_UMLAUT CS_DOUBLE_QUOTES  &mtt DEL BSPC
-&MAN                        &mtt END CS_N7   &mtt DOWN CS_N8  &mtt PG_DN CS_N9  &mtt CS_SECTION CS_QMARK    &mtt CS_TILDE CS_EXCL    &mtt CS_GRAVE CS_COMMA      &mtt CS_CARET CS_DOT         &mtt CS_EURO CS_DOLLAR           &kp ENTER
+&to 0                       &mtt END CS_N7   &mtt DOWN CS_N8  &mtt PG_DN CS_N9  &mtt CS_SECTION CS_QMARK    &mtt CS_TILDE CS_EXCL    &mtt CS_GRAVE CS_COMMA      &mtt CS_CARET CS_DOT         &mtt CS_EURO CS_DOLLAR           &kp ENTER
                                              &SHFT                              &mtt LEFT_GUI CS_N0         &kp SPACE                &sk LCTRL                   &SHFT
             >;
         };
