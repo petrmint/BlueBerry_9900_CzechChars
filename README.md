@@ -12,7 +12,7 @@ something that brought back the vibes of the good old Blackberry times of ultima
 
 My usage:
 - ZitaoTech BB9900 USB/BLE keyboard (notice the little hole on the bottom: you can press twice to invoke the bootloader and connect via a cable to your computer to re-flash if you really muck up your firmware - you can guess why I know this :-)
-- Android 13 phone (Pixel 4a)
+- Android 13 phone (Pixel 4a) with Niagara launcher
 - Czech QWERTY Android keyboard installed (will not work with the default US keyboard due to different characters mapping on the physical keyboard!)
 - Microsoft SwiftKey keyboard app to interpret the physical key presses, with Czech language installed
 - the Czech characters (háčky, čárky) can be invoked by long pressing the respective keys on the keyboard in Layer 0 (there are more characters available in Layer 1 = alt layer), or long press K for čárka, long press L for háček and then press the required character
