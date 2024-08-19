@@ -13,12 +13,12 @@ something that brought back the vibes of the good old Blackberry times of ultima
 My usage:
 - ZitaoTech BB9900 USB/BLE keyboard (notice the little hole on the bottom: you can press twice to invoke the bootloader and connect via a cable to your computer to re-flash if you really muck up your firmware - you can guess why I know this :-)
 - Android 13 phone (Pixel 4a) with Niagara launcher
-- Czech QWERTY Android keyboard installed (will not work with the default US keyboard due to different characters mapping on the physical keyboard!)
-- Microsoft SwiftKey keyboard app to interpret the physical key presses, with Czech language installed
-- the Czech characters (háčky, čárky) can be invoked by long pressing the respective keys on the keyboard in Layer 0 (there are more characters available in Layer 1 = alt layer), or long press K for čárka, long press L for háček and then press the required character
-- using SwiftKey features of guessing phrases, you can press space to invoke the middle suggestion (option 2), or use the 0 key for other suggestions (short press = left suggestion, long press = right suggestion; this is as close as I could emulate the great feature of swipe-up gestures on the capacitative keyboard of Blackberry Key 1 and 2 while using Blackberry keyboard app)
+- Czech QWERTY Android keyboard installed on the mobile (Czech letters will not work with the default US keyboard due to different characters mapping on the physical keyboard!)
+- Microsoft SwiftKey keyboard app to interpret the physical key presses, with the Czech language installed
+- the Czech characters (háčky, čárky) can be invoked by long pressing the respective keys on the physical keyboard in Layer 0 (there are more characters available in Layer 1 = alt layer); or long press K for "čárka", long press L for "háček" and then press the required letter
+- using the SwiftKey feature of guessing phrases, you can press "space" to invoke the middle suggestion ("option 2"), or use the 0 key for other suggestions (short press = left suggestion = Option 1, long press = right suggestion = Option 3); this was as close as I could emulate the great feature of swipe-up gestures that used to work the old capacitative keyboard of Blackberry Key 1/2)
 - press $ to backspace, press Del to delete
-- I'll try to document it once my keymappings become a bit more stable :-) In the mean time, you can take a look at the bb9900.keymap file in my fork for the raw details (but beware of lots of mod-morphs) 
+- I'll try to document all other mappings once my keymappings become a bit more stable :-) In the mean time, you can take a look at the bb9900.keymap file in my fork for the raw details (but beware of lots of mod-morphs) 
 
 
 Thanks to the fabulous work of the guys below, they made me feel 15 years younger again :-)
