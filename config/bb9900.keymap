@@ -192,13 +192,13 @@
             bindings = <&kp>, <&glo>;
         };
 
-        mmAltVyp: Alt_SwitchOff_KBDmouse {
+        mmTabVyp: TabMenu_SwitchOffKBDmouse {
             compatible = "zmk,behavior-mod-morph";
-            label = "mod morph Alt and Switchoff";
-            bindings = <&sk RIGHT_ALT>, <&hm2 EP_TOG K_COFFEE>;
+            label = "mod morph Tab_and_Menu plus Switchoffs";
+            bindings = <&mtt K_APP TAB>, <&hm2 EP_TOG K_COFFEE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_LALT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mmBHUR: BackHome_UndoRedo {
@@ -233,7 +233,7 @@
         default_layer {
             bindings = <
 &none              &none
-&mtt K_CMENU TAB   &ALTL              &gresc             &mmBHUR            &mmAltVyp
+&sk RIGHT_ALT      &ALTL              &gresc             &mmBHUR            &mmTabVyp
 &mtt LS(Q) Q       &mtt CS_E_CARON W  &mtt CS_E_ACUTE E  &mtt CS_R_CARON R  &mtt CS_CARON T  &mtt CS_Y_ACUTE Y    &mtt CS_U_RING U   &mtt CS_I_ACUTE I  &mtt CS_ACUTE O  &mtt LS(P) P
 &mtt CS_A_ACUTE A  &mtt CS_S_CARON S  &mtt CS_CARON D    &mtt LS(F) F       &mtt LS(G) G     &mtt LS(H) H         &mtt CS_U_ACUTE J  &mtt CS_ACUTE K    &mtt CS_CARON L  &kp BSPC
 &ALTL              &mtt CS_Z_CARON Z  &mtt LS(X) X       &mtt CS_C_CARON C  &mtt LS(V) V     &mtt LS(B) B         &mtt CS_CARON N    &mtt LS(M) M       &kp DELETE       &kp ENTER
@@ -244,7 +244,7 @@
         alt_layer {
             bindings = <
 &none                       &none
-&mtt K_CONTEXT_MENU TAB     &MAN             &gresc           &mmBHUR           &mmAltVyp
+&sk RIGHT_ALT               &MAN             &gresc           &mmBHUR           &mmTabVyp
 &mtt CS_PERCENT CS_HASH     &mtt HOME CS_N1  &mtt UP CS_N2    &mtt PG_UP CS_N3  &mtt CS_LBKT CS_LPAR        &mtt CS_RBKT CS_RPAR     &mtt CS_LT CS_UNDER         &mtt CS_GT CS_MINUS          &mtt CS_EQUAL CS_PLUS            &mtt CS_AMPS CS_AT
 &mtt CS_DEGREE CS_ASTERISK  &mtt LEFT CS_N4  &mtt DOWN CS_N5  &mtt RIGHT CS_N6  &mtt CS_BACKSLASH CS_SLASH  &mtt CS_PIPE CS_COLON    &mtt CS_LEFT_BRACE CS_SEMI  &mtt CS_RIGHT_BRACE CS_APOS  &mtt CS_UMLAUT CS_DOUBLE_QUOTES  &mtt DEL BSPC
 &to 0                       &mtt END CS_N7   &mtt DOWN CS_N8  &mtt PG_DN CS_N9  &mtt CS_SECTION CS_QMARK    &mtt CS_TILDE CS_EXCL    &mtt CS_GRAVE CS_COMMA      &mtt CS_CARET CS_DOT         &mtt CS_EURO CS_DOLLAR           &kp ENTER
