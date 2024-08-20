@@ -43,7 +43,7 @@
 &gresc {
     bindings = <&mkp LCLK>, <&mt PAGE_UP PAGE_DOWN>;
 
-    mods = <(MOD_LSFT|MOD_RSFT)>;
+    mods = <(MOD_LSFT|MOD_RSFT|MOD_RALT)>;
 };
 
 / {
