@@ -113,7 +113,9 @@
         tap: tap {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings =
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_press>;
         };
 
         glo: globe_pseudo_mod {
@@ -126,6 +128,13 @@
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
                 <&kp GLOBE>;
+        };
+
+        mSOPK: macro_switchoff {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&ext_power EP_TOG &kp K_COFFEE>;
+            label = "switch off phone and keyboard";
         };
 
         // Hold Tap Behaviors
@@ -195,7 +204,7 @@
         mmTabVyp: TabMenu_SwitchOffKBDmouse {
             compatible = "zmk,behavior-mod-morph";
             label = "mod morph Tab_and_Menu plus Switchoffs";
-            bindings = <&mtt K_APP TAB>, <&hm2 EP_TOG K_COFFEE>;
+            bindings = <&mtt K_APP TAB>, <&htAOFFtog 0 K_COFFEE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -232,7 +241,16 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Tap dance first mouse click then scroll";
             #binding-cells = <0>;
-            bindings = <&gresc>, <&kp CAPS>;
+            bindings = <&gresc>, <&mkp LCLK>, <&kp CAPS>;
+        };
+
+        htAOFFtog: htAOFFtog {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTAOFFTOG";
+            bindings = <&mSOPK>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <500>;
         };
 
         //End Behvaiors here
