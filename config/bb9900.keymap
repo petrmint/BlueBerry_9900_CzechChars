@@ -204,7 +204,7 @@
         mmTabVyp: TabMenu_SwitchOffKBDmouse {
             compatible = "zmk,behavior-mod-morph";
             label = "mod morph Tab_and_Menu plus Switchoffs";
-            bindings = <&mtt K_APP TAB>, <&htAOFFtog 0 K_COFFEE>;
+            bindings = <&mtt K_APP TAB>, <&htAOFFtog 0 EP_TOG>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -247,7 +247,7 @@
         htAOFFtog: htAOFFtog {
             compatible = "zmk,behavior-hold-tap";
             label = "HTAOFFTOG";
-            bindings = <&mSOPK>, <&kp>;
+            bindings = <&mSOPK>, <&ext_power>;
 
             #binding-cells = <2>;
             tapping-term-ms = <500>;
