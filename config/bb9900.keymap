@@ -216,7 +216,7 @@
             bindings = <&mtt LG(RETURN) K_BACK>, <&mtt LC(LS(Z)) LC(Z)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_LALT|MOD_RSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mmSKP: SwiftKeySwipe_PrtScr {
@@ -257,6 +257,35 @@
     };
 
     macros {
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        HRarrowUP {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <2 14>;
+        };
+
+        HRarrowDOWN {
+            bindings = <&kp DOWN>;
+            key-positions = <2 24>;
+        };
+
+        HRarrowDOWN2 {
+            bindings = <&kp DOWN_ARROW>;
+            key-positions = <2 34>;
+        };
+
+        HRarrowRIGHT {
+            bindings = <&kp RIGHT_ARROW>;
+            key-positions = <2 25>;
+        };
+
+        HRarrowLEFT {
+            bindings = <&kp LEFT>;
+            key-positions = <2 23>;
+        };
     };
 
     keymap {
