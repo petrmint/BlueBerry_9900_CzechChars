@@ -271,10 +271,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mmIACarrUP: mmIACarrUP {
+        mmKACarrUP: mmKACarrUP {
             compatible = "zmk,behavior-mod-morph";
-            label = "ModMorph I acute vs Arrow up";
-            bindings = <&mtt CS_I_ACUTE I>, <&kp UP_ARROW>;
+            label = "ModMorph K vs Arrow up";
+            bindings = <&mtt CS_ACUTE K>, <&kp UP_ARROW>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -349,9 +349,9 @@
             bindings = <
 &none              &none
 &tdAC              &mmBBRCtrlLay0     &tdMCS             &mmBHUR            &mmTabVyp
-&mtt LS(Q) Q       &mtt CS_E_CARON W  &mtt CS_E_ACUTE E  &mtt CS_R_CARON R  &mtt CS_CARON T  &mtt CS_Y_ACUTE Y    &mtt CS_U_RING U  &mmIACarrUP      &mtt CS_ACUTE O  &mtt LS(P) P
-&mtt CS_A_ACUTE A  &mtt CS_S_CARON S  &mtt CS_CARON D    &mtt LS(F) F       &mtt LS(G) G     &mtt LS(H) H         &mmUACarrLFT      &mtt CS_ACUTE K  &mmCARarrRGHT    &kp BSPC
-&ALTL              &mtt CS_Z_CARON Z  &mtt LS(X) X       &mtt CS_C_CARON C  &mtt LS(V) V     &mtt LS(B) B         &mtt CS_CARON N   &mmMarrDWN       &kp DELETE       &kp ENTER
+&mtt LS(Q) Q       &mtt CS_E_CARON W  &mtt CS_E_ACUTE E  &mtt CS_R_CARON R  &mtt CS_CARON T  &mtt CS_Y_ACUTE Y    &mtt CS_U_RING U  &mtt CS_I_ACUTE I  &mtt CS_ACUTE O  &mtt LS(P) P
+&mtt CS_A_ACUTE A  &mtt CS_S_CARON S  &mtt CS_CARON D    &mtt LS(F) F       &mtt LS(G) G     &mtt LS(H) H         &mmUACarrLFT      &mmKACarrUP        &mmCARarrRGHT    &kp BSPC
+&ALTL              &mtt CS_Z_CARON Z  &mtt LS(X) X       &mtt CS_C_CARON C  &mtt LS(V) V     &mtt LS(B) B         &mtt CS_CARON N   &mmMarrDWN         &kp DELETE       &kp ENTER
                                       &SHFT                                 &mmSKP           &kp SPACE            &sk LCTRL         &SHFT
             >;
         };
