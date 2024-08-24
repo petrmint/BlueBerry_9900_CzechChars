@@ -264,7 +264,7 @@
 
         mmBBRCtrlLay0: mmBBRCtrlLay0 {
             compatible = "zmk,behavior-mod-morph";
-            label = "ModMorph BBR button Control vs Tapdance to layer 1";
+            label = "ModMorph BBR Ctrl vs Tpdnc lay1";
             bindings = <&sk LEFT_CONTROL>, <&ALTL>;
 
             #binding-cells = <0>;
@@ -300,7 +300,7 @@
 
         mmUACarrLFT: mmUACarrLFT {
             compatible = "zmk,behavior-mod-morph";
-            label = "ModMorph U acute vs Arrow Left";
+            label = "ModMorph U acute vs ArrwLft";
             bindings = <&mtt CS_U_ACUTE J>, <&kp LEFT_ARROW>;
 
             #binding-cells = <0>;
