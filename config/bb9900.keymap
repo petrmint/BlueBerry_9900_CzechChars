@@ -255,7 +255,7 @@
 
         mmBBRCtrlLay1: mmBBRCtrlLay1 {
             compatible = "zmk,behavior-mod-morph";
-            label = "ModMorph BBR button Control vs Tapdance to layer 0or2";
+            label = "ModMorph BBR Ctrl vs Tpdnc 0or2";
             bindings = <&sk LEFT_CONTROL>, <&MAN>;
 
             #binding-cells = <0>;
