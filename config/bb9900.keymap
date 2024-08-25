@@ -137,6 +137,13 @@
             label = "switch off phone and keyboard";
         };
 
+        mNsHackem: mNsHackem {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CS_CARON &kp N>;
+            label = "MNSHACKEM";
+        };
+
         // Hold Tap Behaviors
 
         KPM: behavior_KPM {
@@ -234,7 +241,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Tap dance Alt + CAPS";
             #binding-cells = <0>;
-            bindings = <&sk RIGHT_ALT>, <&kp CAPS>;
+            bindings = <&sk LEFT_CONTROL>, <&kp CAPS>;
         };
 
         tdMCS: TD_mouse_click_scroll {
@@ -242,6 +249,8 @@
             label = "Tap dance first mouse click then scroll";
             #binding-cells = <0>;
             bindings = <&gresc>, <&mkp LCLK>, <&kp CAPS>;
+
+            tapping-term-ms = <250>;
         };
 
         htAOFFtog: htAOFFtog {
@@ -256,7 +265,7 @@
         mmBBRCtrlLay1: mmBBRCtrlLay1 {
             compatible = "zmk,behavior-mod-morph";
             label = "ModMorph BBR Ctrl vs Tpdnc 0or2";
-            bindings = <&sk LEFT_CONTROL>, <&MAN>;
+            bindings = <&sk RIGHT_ALT>, <&MAN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -265,7 +274,7 @@
         mmBBRCtrlLay0: mmBBRCtrlLay0 {
             compatible = "zmk,behavior-mod-morph";
             label = "ModMorph BBR Ctrl vs Tpdnc lay1";
-            bindings = <&sk LEFT_CONTROL>, <&ALTL>;
+            bindings = <&sk RIGHT_ALT>, <&ALTL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -302,6 +311,52 @@
             compatible = "zmk,behavior-mod-morph";
             label = "ModMorph U acute vs ArrwLft";
             bindings = <&mtt CS_U_ACUTE J>, <&kp LEFT_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        mmUACpgUP: mmUACpgUP {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MorphMod Ukrouzek vs pageUP";
+            bindings = <&mtt CS_U_RING U>, <&kp PAGE_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        mmNpgDWN: mmNpgDWN {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ModMorph N pageDWN";
+            bindings = <&htNsHackem 0 N>, <&kp PAGE_DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        htNsHackem: htNsHackem {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTNSHACKEM";
+            bindings = <&mNsHackem>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <125>;
+            flavor = "tap-preferred";
+        };
+
+        tdHomeEnd: tdHomeEnd {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TapDance Home then End";
+            #binding-cells = <0>;
+            bindings = <&kp HOME>, <&kp END>;
+        };
+
+        mmHvsHmEnd: mmHvsHmEnd {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ModMorph H_colon vs HomeEnd";
+            bindings = <&mtt COLON H>, <&tdHomeEnd>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -349,10 +404,10 @@
             bindings = <
 &none              &none
 &tdAC              &mmBBRCtrlLay0     &tdMCS             &mmBHUR            &mmTabVyp
-&mtt LS(Q) Q       &mtt CS_E_CARON W  &mtt CS_E_ACUTE E  &mtt CS_R_CARON R  &mtt CS_CARON T  &mtt CS_Y_ACUTE Y    &mtt CS_U_RING U  &mtt CS_I_ACUTE I  &mtt CS_ACUTE O  &mtt LS(P) P
-&mtt CS_A_ACUTE A  &mtt CS_S_CARON S  &mtt CS_CARON D    &mtt LS(F) F       &mtt LS(G) G     &mtt LS(H) H         &mmUACarrLFT      &mmKACarrUP        &mmCARarrRGHT    &kp BSPC
-&ALTL              &mtt CS_Z_CARON Z  &mtt LS(X) X       &mtt CS_C_CARON C  &mtt LS(V) V     &mtt LS(B) B         &mtt CS_CARON N   &mmMarrDWN         &kp DELETE       &kp ENTER
-                                      &SHFT                                 &mmSKP           &kp SPACE            &sk LCTRL         &SHFT
+&mtt LS(Q) Q       &mtt CS_E_CARON W  &mtt CS_E_ACUTE E  &mtt CS_R_CARON R  &mtt CS_CARON T  &mtt CS_Y_ACUTE Y    &mmUACpgUP    &mtt CS_I_ACUTE I  &mtt CS_ACUTE O  &mtt LS(P) P
+&mtt CS_A_ACUTE A  &mtt CS_S_CARON S  &mtt CS_CARON D    &mtt LS(F) F       &mtt LS(G) G     &mmHvsHmEnd          &mmUACarrLFT  &mmKACarrUP        &mmCARarrRGHT    &kp BSPC
+&ALTL              &mtt CS_Z_CARON Z  &mtt LS(X) X       &mtt CS_C_CARON C  &mtt LS(V) V     &mtt LS(B) B         &mmNpgDWN     &mmMarrDWN         &kp DELETE       &kp ENTER
+                                      &SHFT                                 &mmSKP           &kp SPACE            &sk LCTRL     &SHFT
             >;
         };
 
