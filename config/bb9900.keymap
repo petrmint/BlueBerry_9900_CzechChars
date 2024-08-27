@@ -458,11 +458,11 @@
         layer_4arrows {
             bindings = <
 &trans  &trans
-&trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans       &kp PG_UP  &kp UP    &trans     &trans
-&trans  &trans  &trans  &trans  &trans     &kp HOME     &kp LEFT   &kp F2    &kp RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans     &kp END      &kp PG_DN  &kp DOWN  &trans     &trans
-                &trans          &mkp MCLK  &mkp LCLK    &mkp RCLK  &trans
+&trans  &trans  &trans    &trans    &trans
+&trans  &kp F1  &kp F2    &kp UP    &trans     &kp HOME     &kp PG_UP  &kp UP    &trans     &trans
+&trans  &trans  &kp LEFT  &trans    &kp RIGHT  &kp LEFT     &kp LEFT   &kp LEFT  &kp RIGHT  &trans
+&trans  &trans  &trans    &kp DOWN  &trans     &kp END      &kp PG_DN  &kp DOWN  &trans     &trans
+                &trans              &mkp MCLK  &mkp LCLK    &mkp RCLK  &trans
             >;
         };
     };
