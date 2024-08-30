@@ -144,6 +144,27 @@
             label = "MNSHACKEM";
         };
 
+        mDsHackem: mDsHackem {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CS_CARON &kp D>;
+            label = "MDSHACKEM";
+        };
+
+        mTsHackem: mTsHackem {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CS_CARON &kp T>;
+            label = "MTSHACKEM";
+        };
+
+        mOsCarkou: mOsCarkou {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CS_ACUTE &kp O>;
+            label = "MOSCARKOU";
+        };
+
         // Hold Tap Behaviors
 
         KPM: behavior_KPM {
@@ -377,9 +398,18 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&lt 3 LEFT_SHIFT>, <&kp CLCK>;
+            bindings = <&htLSHF_ArrLay_CAPS 3 LEFT_SHIFT>, <&kp CLCK>;
 
             label = "SHIFT_ArrowLayer_2xCAPS";
+        };
+
+        htLSHF_ArrLay_CAPS: holdArrLay_skLShift_2xCAPS {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTLSHF_ARRLAY_CAPS";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
         };
 
         //End Behvaiors here
