@@ -63,7 +63,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&sl ALT>, <&to ALT>;
+            bindings = <&sl 1>, <&to 1>;
         };
 
         SHFT: tap_dance_2 {
@@ -77,14 +77,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&to 0>, <&to MEDIA>;
+            bindings = <&to 0>, <&to 2>;
         };
 
         MAN: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&to 0>, <&to UPPER>;
+            bindings = <&to 0>, <&to 4>;
         };
 
         EALT: tap_dance_5 {
@@ -105,7 +105,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&to 0>, <&to MEDIA>;
+            bindings = <&to 0>, <&to 2>;
         };
 
         // Macro Behaviors
@@ -241,7 +241,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TapDance ArrowLayer vs CAPS";
             #binding-cells = <0>;
-            bindings = <&mo 4>, <&kp CAPS>;
+            bindings = <&mo 3>, <&kp CAPS>;
 
             tapping-term-ms = <250>;
         };
@@ -433,17 +433,6 @@
             >;
         };
 
-        upper_layer {
-            bindings = <
-&none      &none
-&mkp LCLK  &mkp RCLK  &mkp MCLK  &mkp MB4  &mkp MB5
-&kp Q      &kp W      &kp E      &kp R     &kp T                    &kp Y        &kp U  &kp I      &kp O     &kp P
-&kp A      &kp S      &kp D      &kp F     &kp G                    &kp H        &kp J  &kp K      &kp L     &kp BSPC
-&EMU       &kp Z      &kp X      &kp C     &kp V                    &kp B        &kp N  &kp M      &kp DLLR  &kp ENTER
-                      &SHFT                &msk LEFT_GUI LG(SPACE)  &kp SPACE    &EALT  &sk LCTRL
-            >;
-        };
-
         media_layer {
             bindings = <
 &none         &none
@@ -463,6 +452,17 @@
 &trans  &trans  &kp LEFT  &trans    &kp RIGHT  &kp LEFT     &kp LEFT   &kp LEFT  &kp RIGHT  &trans
 &trans  &trans  &trans    &kp DOWN  &trans     &kp END      &kp PG_DN  &kp DOWN  &trans     &trans
                 &trans              &mkp MCLK  &mkp LCLK    &mkp RCLK  &trans
+            >;
+        };
+
+        upper_layer {
+            bindings = <
+&none      &none
+&mkp LCLK  &mkp RCLK  &mkp MCLK  &mkp MB4  &mkp MB5
+&kp Q      &kp W      &kp E      &kp R     &kp T                    &kp Y        &kp U  &kp I      &kp O     &kp P
+&kp A      &kp S      &kp D      &kp F     &kp G                    &kp H        &kp J  &kp K      &kp L     &kp BSPC
+&EMU       &kp Z      &kp X      &kp C     &kp V                    &kp B        &kp N  &kp M      &kp DLLR  &kp ENTER
+                      &SHFT                &msk LEFT_GUI LG(SPACE)  &kp SPACE    &EALT  &sk LCTRL
             >;
         };
     };
