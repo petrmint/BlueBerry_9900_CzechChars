@@ -457,10 +457,10 @@
             bindings = <
 &trans  &trans
 &trans  &trans          &trans      &trans         &trans
-&trans  &kp HOME        &kp UP      &kp PAGE_UP    &trans     &KPM SCROLL_UP K_SCROLL_UP        &trans  &trans  &trans  &trans
-&trans  &kp LEFT_ARROW  &kp RETURN  &kp RIGHT      &trans     &trans                            &trans  &trans  &trans  &trans
-&trans  &kp END         &kp DOWN    &kp PAGE_DOWN  &trans     &KPM SCROLL_DOWN K_SCROLL_DOWN    &trans  &trans  &trans  &trans
-                        &trans                     &mkp RCLK  &mkp LCLK                         &trans  &trans
+&trans  &kp HOME        &kp UP      &kp PAGE_UP    &trans     &kp K_SCROLL_UP      &trans  &trans  &trans  &trans
+&trans  &kp LEFT_ARROW  &kp RETURN  &kp RIGHT      &trans     &trans               &trans  &trans  &trans  &trans
+&trans  &kp END         &kp DOWN    &kp PAGE_DOWN  &trans     &kp K_SCROLL_DOWN    &trans  &trans  &trans  &trans
+                        &trans                     &mkp RCLK  &mkp LCLK            &trans  &trans
             >;
         };
 
