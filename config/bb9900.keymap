@@ -238,15 +238,6 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
-        mmBHUR: BackHome_UndoRedo {
-            compatible = "zmk,behavior-mod-morph";
-            label = "Mod Morph Back button";
-            bindings = <&mtt LG(RETURN) K_BACK>, <&mtt LC(LS(Z)) LC(Z)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         mmSKP: SwiftKeySwipe_PrtScr {
             compatible = "zmk,behavior-mod-morph";
             label = "mod morph SwiftKey and PrintScreen";
@@ -258,11 +249,11 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        tdArrCAP: Arr_CAPS {
+        tdAppCAP: AppMenu_CAPS {
             compatible = "zmk,behavior-tap-dance";
-            label = "TapDance ArrowLayer vs CAPS";
+            label = "TapDance App Menu vs CAPS";
             #binding-cells = <0>;
-            bindings = <&mo 3>, <&kp CAPS>;
+            bindings = <&kp K_APP>, <&kp CAPS>;
 
             tapping-term-ms = <250>;
         };
@@ -419,22 +410,22 @@
         default_layer {
             bindings = <
 &none              &none
-&mmBBRAltLay0      &tdArrCAP          &tdMCS             &mmBHUR            &mmTabVyp
-&mtt LS(Q) Q       &mtt CS_E_CARON W  &mtt CS_E_ACUTE E  &mtt CS_R_CARON R  &htTsHackem 0 T  &mtt CS_Y_ACUTE Y    &mtt CS_U_ACUTE U  &mtt CS_I_ACUTE I  &htOsCarkou 0 O  &mtt CS_AT_SIGN P
-&mtt CS_A_ACUTE A  &mtt CS_S_CARON S  &htDsHackem 0 D    &mtt LS(F) F       &mtt LS(G) G     &mtt CS_COLON H      &mtt CS_U_RING J   &mtt CS_ACUTE K    &mtt CS_CARON L  &kp BSPC
-&ALTL              &mtt CS_Z_CARON Z  &mtt LS(X) X       &mtt CS_C_CARON C  &mtt LS(V) V     &mtt LS(B) B         &htNsHackem 0 N    &mtt CS_DOT M      &kp DELETE       &kp ENTER
-                                      &SHFT                                 &mmSKP           &tdSPACEorDOT        &sk LCTRL          &SHFT2arr
+&mmBBRAltLay0      &tdAppCAP          &tdMCS             &mtt LG(RETURN) K_BACK  &mmTabVyp
+&mtt LS(Q) Q       &mtt CS_E_CARON W  &mtt CS_E_ACUTE E  &mtt CS_R_CARON R       &htTsHackem 0 T  &mtt CS_Y_ACUTE Y    &mtt CS_U_ACUTE U  &mtt CS_I_ACUTE I  &htOsCarkou 0 O  &mtt CS_AT_SIGN P
+&mtt CS_A_ACUTE A  &mtt CS_S_CARON S  &htDsHackem 0 D    &mtt LS(F) F            &mtt LS(G) G     &mtt CS_COLON H      &mtt CS_U_RING J   &mtt CS_ACUTE K    &mtt CS_CARON L  &kp BSPC
+&ALTL              &mtt CS_Z_CARON Z  &mtt LS(X) X       &mtt CS_C_CARON C       &mtt LS(V) V     &mtt LS(B) B         &htNsHackem 0 N    &mtt CS_DOT M      &kp DELETE       &kp ENTER
+                                      &SHFT                                      &mmSKP           &tdSPACEorDOT        &sk LCTRL          &SHFT2arr
             >;
         };
 
         alt_layer {
             bindings = <
 &none                       &none
-&mmBBRAltLay1               &tdArrCAP        &tdMCS           &mmBHUR           &mmTabVyp
-&mtt CS_PERCENT CS_HASH     &mtt HOME CS_N1  &mtt UP CS_N2    &mtt PG_UP CS_N3  &mtt CS_LBKT CS_LPAR        &mtt CS_RBKT CS_RPAR     &mtt CS_LT CS_UNDER         &mtt CS_GT CS_MINUS          &mtt CS_EQUAL CS_PLUS            &mtt CS_AMPS CS_AT
-&mtt CS_DEGREE CS_ASTERISK  &mtt LEFT CS_N4  &mtt DOWN CS_N5  &mtt RIGHT CS_N6  &mtt CS_BACKSLASH CS_SLASH  &mtt CS_PIPE CS_COLON    &mtt CS_LEFT_BRACE CS_SEMI  &mtt CS_RIGHT_BRACE CS_APOS  &mtt CS_UMLAUT CS_DOUBLE_QUOTES  &mtt DEL BSPC
-&to 0                       &mtt END CS_N7   &mtt DOWN CS_N8  &mtt PG_DN CS_N9  &mtt CS_SECTION CS_QMARK    &mtt CS_TILDE CS_EXCL    &mtt CS_GRAVE CS_COMMA      &mtt CS_CARET CS_DOT         &mtt CS_EURO CS_DOLLAR           &kp ENTER
-                                             &SHFT                              &mtt LEFT_GUI CS_N0         &tdSPACEorDOT            &sk LCTRL                   &SHFT2arr
+&mmBBRAltLay1               &tdAppCAP        &tdMCS           &mtt LG(RETURN) K_BACK  &mmTabVyp
+&mtt CS_PERCENT CS_HASH     &mtt HOME CS_N1  &mtt UP CS_N2    &mtt PG_UP CS_N3        &mtt CS_LBKT CS_LPAR        &mtt CS_RBKT CS_RPAR     &mtt CS_LT CS_UNDER         &mtt CS_GT CS_MINUS          &mtt CS_EQUAL CS_PLUS            &mtt CS_AMPS CS_AT
+&mtt CS_DEGREE CS_ASTERISK  &mtt LEFT CS_N4  &mtt DOWN CS_N5  &mtt RIGHT CS_N6        &mtt CS_BACKSLASH CS_SLASH  &mtt CS_PIPE CS_COLON    &mtt CS_LEFT_BRACE CS_SEMI  &mtt CS_RIGHT_BRACE CS_APOS  &mtt CS_UMLAUT CS_DOUBLE_QUOTES  &mtt DEL BSPC
+&to 0                       &mtt END CS_N7   &mtt DOWN CS_N8  &mtt PG_DN CS_N9        &mtt CS_SECTION CS_QMARK    &mtt CS_TILDE CS_EXCL    &mtt CS_GRAVE CS_COMMA      &mtt CS_CARET CS_DOT         &mtt CS_EURO CS_DOLLAR           &kp ENTER
+                                             &SHFT                                    &mtt LEFT_GUI CS_N0         &tdSPACEorDOT            &sk LCTRL                   &SHFT2arr
             >;
         };
 
