@@ -77,14 +77,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&to 0>, <&to 3>;
+            bindings = <&to 0>, <&to 4>;
         };
 
         MAN: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&to 0>, <&to 3>;
+            bindings = <&to 0>, <&to 4>;
         };
 
         EALT: tap_dance_5 {
@@ -105,7 +105,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&to 0>, <&to 3>;
+            bindings = <&to 0>, <&to 4>;
         };
 
         // Macro Behaviors
@@ -310,7 +310,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&htLSHF_ArrLay_CAPS 4 LEFT_SHIFT>, <&kp CLCK>;
+            bindings = <&htLSHF_ArrLay_CAPS 2 LEFT_SHIFT>, <&kp CLCK>;
 
             label = "SHIFT_ArrowLayer_2xCAPS";
         };
@@ -378,29 +378,14 @@
     combos {
         compatible = "zmk,combos";
 
-        HRarrowUP {
-            bindings = <&kp UP_ARROW>;
-            key-positions = <2 14>;
+        Win_N {
+            bindings = <&kp LG(N)>;
+            key-positions = <33 3>;
         };
 
-        HRarrowDOWN {
-            bindings = <&kp DOWN>;
-            key-positions = <2 24>;
-        };
-
-        HRarrowDOWN2 {
-            bindings = <&kp DOWN_ARROW>;
-            key-positions = <2 34>;
-        };
-
-        HRarrowRIGHT {
-            bindings = <&kp RIGHT_ARROW>;
-            key-positions = <2 25>;
-        };
-
-        HRarrowLEFT {
-            bindings = <&kp LEFT>;
-            key-positions = <2 23>;
+        WIN_space {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <39 3>;
         };
     };
 
@@ -429,14 +414,14 @@
             >;
         };
 
-        upper_layer {
+        layer_4arrows {
             bindings = <
-&none      &none
-&mkp LCLK  &mkp RCLK  &mkp MCLK  &mkp MB4  &mkp MB5
-&kp Q      &kp W      &kp E      &kp R     &kp T                    &kp Y        &kp U  &kp I      &kp O     &kp P
-&kp A      &kp S      &kp D      &kp F     &kp G                    &kp H        &kp J  &kp K      &kp L     &kp BSPC
-&EMU       &kp Z      &kp X      &kp C     &kp V                    &kp B        &kp N  &kp M      &kp DLLR  &kp ENTER
-                      &SHFT                &msk LEFT_GUI LG(SPACE)  &kp SPACE    &EALT  &sk LCTRL
+&trans  &trans
+&trans  &trans          &trans      &trans         &trans
+&trans  &kp HOME        &kp UP      &kp PAGE_UP    &trans     &kp K_SCROLL_UP      &trans  &trans  &trans  &trans
+&trans  &kp LEFT_ARROW  &kp RETURN  &kp RIGHT      &trans     &trans               &trans  &trans  &trans  &trans
+&trans  &kp END         &kp DOWN    &kp PAGE_DOWN  &trans     &kp K_SCROLL_DOWN    &trans  &trans  &trans  &trans
+                        &trans                     &mkp RCLK  &mkp LCLK            &trans  &trans
             >;
         };
 
@@ -451,14 +436,14 @@
             >;
         };
 
-        layer_4arrows {
+        upper_layer {
             bindings = <
-&trans  &trans
-&trans  &trans          &trans      &trans         &trans
-&trans  &kp HOME        &kp UP      &kp PAGE_UP    &trans     &kp K_SCROLL_UP      &trans  &trans  &trans  &trans
-&trans  &kp LEFT_ARROW  &kp RETURN  &kp RIGHT      &trans     &trans               &trans  &trans  &trans  &trans
-&trans  &kp END         &kp DOWN    &kp PAGE_DOWN  &trans     &kp K_SCROLL_DOWN    &trans  &trans  &trans  &trans
-                        &trans                     &mkp RCLK  &mkp LCLK            &trans  &trans
+&none      &none
+&mkp LCLK  &mkp RCLK  &mkp MCLK  &mkp MB4  &mkp MB5
+&kp Q      &kp W      &kp E      &kp R     &kp T                    &kp Y        &kp U  &kp I      &kp O     &kp P
+&kp A      &kp S      &kp D      &kp F     &kp G                    &kp H        &kp J  &kp K      &kp L     &kp BSPC
+&EMU       &kp Z      &kp X      &kp C     &kp V                    &kp B        &kp N  &kp M      &kp DLLR  &kp ENTER
+                      &SHFT                &msk LEFT_GUI LG(SPACE)  &kp SPACE    &EALT  &sk LCTRL
             >;
         };
     };
